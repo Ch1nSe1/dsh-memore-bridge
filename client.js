@@ -14,7 +14,6 @@ window.__ModuleLoader__.load({
     const RECONNECT_PATH = '/api/dsh-memore-bridge/reconnect';
     const GUIDE_PATH = '/api/dsh-memore-bridge/guide';
     const CONNECTION_SECTION_ID = 'memore-bridge';
-    const GUIDE_SECTION_ID = 'memore-guide';
 
     const S = {
       wrap: { display: 'flex', flexDirection: 'column', gap: '10px' },
@@ -532,9 +531,8 @@ window.__ModuleLoader__.load({
       ctx.slots.inject('settings.section', () =>
         ctx.slots.register({ name: 'settings.section', id: CONNECTION_SECTION_ID, order: 19, label: () => 'Agent 连接' }, ConnectionSection),
       );
-      ctx.slots.inject('settings.section', () =>
-        ctx.slots.register({ name: 'settings.section', id: GUIDE_SECTION_ID, order: 20, label: () => '启动提示词' }, GuideSection),
-      );
+      // 2026-11-24：不再注册「启动提示词」设置页 —— 主界面 composer 已经有同一个入口，
+      // 设置页再来一份属于重复 UI。GuideDock 保留。
       ctx.slots.inject('conversation.composer.dock', () =>
         ctx.slots.register({ name: 'conversation.composer.dock', id: 'memore-guide-dock', order: 60 }, GuideDock),
       );

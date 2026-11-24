@@ -1,6 +1,6 @@
 {
   "name": "dsh-memore-bridge",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "description": "把 Mirror（Memore）的记录库接给 DeepSeek Harness 的 agent：检索、读取、写回提案，全部直连手机上的 App。",
   "type": "module",
   "license": "MIT",
