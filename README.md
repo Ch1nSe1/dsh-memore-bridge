@@ -1,6 +1,6 @@
 # dsh-memore-bridge
 
-把 [Mirror（Memore）](https://github.com/ACAneSe1/Mirror) 的记录库接给 DeepSeek Harness 的 agent：检索、读取、写回提案，
+把 [Mirror（Memore）](https://github.com/Ch1nSe1/Mirror) 的记录库接给 DeepSeek Harness 的 agent：检索、读取、写回提案，
 **全部直连手机上的 App**，读到的永远是当前数据，没有副本、不需要同步。
 
 ## 它是什么
