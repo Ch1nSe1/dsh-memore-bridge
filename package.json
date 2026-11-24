@@ -1,0 +1,45 @@
+{
+  "name": "dsh-memore-bridge",
+  "version": "0.40.1",
+  "description": "把 Mirror（Memore）的记录库接给 DeepSeek Harness 的 agent：检索、读取、写回提案，全部直连手机上的 App。",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACAneSe1/dsh-memore-bridge.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "memore",
+    "memory",
+    "agent"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "mdns.js",
+    "tailnet.js",
+    "SKILL.md",
+    "README.md",
+    "cordis.patch.yml",
+    "review-server.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.0"
+  }
+}
